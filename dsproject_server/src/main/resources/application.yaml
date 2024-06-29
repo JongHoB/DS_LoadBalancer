@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: dsproject-server
+    cloud:
+        gateway:
+            routes:
+                - id: dsproject-service
+                  uri: lb://DSPROJECT-SERVICE/
+                  predicates:
+                      - Path=/DSPROJECT-SERVICE/**
+                  filters:
+                      - CustomFilter
+server:
+    port: 8000
+
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        service-url:
+            defaultZone: http://REGISTRY_SERVER:3000/eureka
+    instance:
+        preferIpAddress: true
+        metadataMap:
+            instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+        leaseRenewalIntervalInSeconds: 100
+        leaseExpirationDurationInSeconds: 200
+

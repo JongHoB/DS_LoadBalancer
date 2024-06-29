@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: DSPROJECT-SERVICE
+
+server:
+    port: 3000
+    servlet:
+        context-path: /DSPROJECT-SERVICE
+
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        service-url:
+            defaultZone: http://REGISTRY_SERVER:3000/eureka
+    instance:
+        preferIpAddress: true
+        metadataMap:
+            instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+        leaseRenewalIntervalInSeconds: 100
+        leaseExpirationDurationInSeconds: 200
