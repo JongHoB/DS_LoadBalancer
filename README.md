@@ -25,3 +25,9 @@ eureka:
 2. `dsproject_eureka` → `dsproject_server` → `dsproject_service` 순으로 실행시킵니다.
 3. `dsproject_service` 는 동일한 코드로 여러 서버에서 실행시켜도 문제 없습니다. Spring+eureka를 통해 자동 탐지하게 됩니다.
 4. `testcode.ipynb` 를 참고하여 실행하면 됩니다.
+
+---
+
+# 📈  Result
+
+<img width="1206" alt="image" src="https://github.com/JongHoB/DS_LoadBalancer/assets/78012131/603bd3ab-b489-419b-a2ef-7d6db9cb76f7">
