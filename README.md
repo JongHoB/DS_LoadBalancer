@@ -28,6 +28,11 @@ eureka:
 
 ---
 
+- LoadBalancing Algorithm is NP-hard Problem. It depends on our current situations (Workloads, Processing Powers...)
+- May need to change Threshold, or so.
+
+---
+
 # 📈  Result
 
 <img width="1206" alt="image" src="https://github.com/JongHoB/DS_LoadBalancer/assets/78012131/603bd3ab-b489-419b-a2ef-7d6db9cb76f7">
